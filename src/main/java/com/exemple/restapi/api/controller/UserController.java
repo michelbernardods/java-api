@@ -19,6 +19,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    // retornar todos os users
     // verificar user o name
     // verificar user o id ou name
     @GetMapping("/userId")
@@ -39,5 +40,12 @@ public class UserController {
         return null;
     }
 
-
+    @GetMapping("/userNameAndEmail")
+    public User getUserNameAndEmail(@RequestParam String name, String email) {
+        Optional user = userService.getUserForNameAndEmail(name, email);
+        if(user.isPresent()){
+            return (User) user.get();
+        }
+        return null;
+    }
 }
