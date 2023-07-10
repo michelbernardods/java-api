@@ -19,9 +19,6 @@ public class UserController {
         this.userService = userService;
     }
 
-    // retornar todos os users
-    // verificar user o name
-    // verificar user o id ou name
     @GetMapping("/userId")
     public User getUserId(@RequestParam Integer id) {
         Optional user = userService.getUserId(id);
