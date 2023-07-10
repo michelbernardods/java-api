@@ -9,12 +9,9 @@ import java.util.*;
 public class UserService {
 
     private List<User> userList;
-    private List<User> totalList;
-
 
     public UserService() {
        userList = new ArrayList<>();
-       totalList = new ArrayList<>();
        User user1 = new User(1, "Michel", 27, "michel@gmail.com");
        User user2 = new User(2, "Bernardo", 28, "bernardo@gmail.com");
        User user3 = new User(3, "Silveira", 29, "silveira@gmail.com");
